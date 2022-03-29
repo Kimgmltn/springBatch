@@ -4,6 +4,16 @@ spring:
     url: jdbc:postgresql://localhost:5432/hs
     username: postgres
     password: gmltn0323@
+    hikari:
+      jdbc-url: jdbc:postgresql://localhost:5432/hs?rewi
   batch:
     initialize-schema: never
+    job:
+      names: ${job.name:NONE}
+  sql:
+    init:
+      data-locations: classpath:person.sql
+      mode: always
+
+
 
